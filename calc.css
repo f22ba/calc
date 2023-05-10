@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+/* リセットCSS */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    all: unset;
+    display: revert;
+}
+/* メイン */
+.main_width{
+    /* background: #333; */
+    display: block;
+    display: flex;
+}
+
+body{
+    background: #333;
+}
+.wrapper{
+    margin-top: 30px;
+    margin-left: 68%;
+    z-index: 3;
+}
+.wrapper .calculator{
+    display: grid;
+    margin: auto;
+    background: rgba(4, 4, 48, 0.966);
+    border-radius: 6px;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    border: #02040d 4px solid;
+}
+
+.wrapper .calculator .result{
+    grid-column: span 4;
+    height: 140px;
+    width: 316px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 30px;
+    background-color: rgba(1, 1, 31, 0.966);
+    color: #fff;
+}
+.main_width .rireki{
+    display: block;
+    position: absolute;
+    left: 20%;
+    /* padding: 10px; */
+    /* height: 100%; */
+    width: 790px;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+    /* font-size: 30px; */
+    background-color: rgba(1, 1, 31, 0.966);
+    color: #fff;
+}
+.wrapper .calculator span{
+    display: grid;
+    place-items: center;
+    width: 82px;
+    height: 76px;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    border-top: 2px solid rgba(255, 255, 255, 0.05);
+    border-left: 2px solid rgba(255, 255, 255, 0.05);
+    /* border: 1px solid rgba(255, 255, 255, 0.05); */
+    transition: .5s;
+}
+span.del{
+    display: block;
+    position: absolute;
+    left: 14%;
+    top: 30px;
+    z-index: 2;
+    place-items: center;
+    width: 82px;
+    height: 76px;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    /* border: 1px solid rgba(255, 255, 255, 0.05); */
+    transition: .5s;
+}
+span.del:hover{
+    transition: 0s;
+    background: rgba(255, 255, 255, 0.05);
+}
+span.del:active{
+    background: #2785ff;
+    color: #192f00;
+    font-weight: 500;
+}
+.wrapper .calculator span:hover{
+    transition: 0s;
+    background: rgba(255, 255, 255, 0.05);
+}
+.wrapper .calculator span.clear:hover{
+    background: rgba(255, 175, 2, 0.336);
+}
+.wrapper .calculator span.equal:hover{
+    background: rgba(255, 175, 2, 0.336);
+}
+.wrapper .calculator span:active{
+    background: #2785ff;
+    color: #192f00;
+    font-size: 24px;
+    font-weight: 500;
+}
+.wrapper .calculator span.clear:active{
+    background: #ffaa0c;
+    color: #192f00;
+}
+.wrapper .calculator span.equal:active{
+    background: #ffaa0c;
+    color: #192f00;
+}
+.wrapper .calculator .clear{
+    grid-column: span 2/1;
+    width: 166px;
+    background: rgba(226, 155, 2, 0.336);
+}
+.wrapper .calculator .zero{
+    grid-column: span 2;
+    width: 165px;
+    /* height: 150px; */
+}
+.wrapper .calculator .equal{
+    background: rgba(226, 155, 2, 0.336);
+}
+/* spanサイズにボタンサイズを合わせる */
+button{
+    width: 82px;
+    height: 76px;
+    text-align: center;
+}
+.wrapper .calculator .zero button{
+    width: 164px;
+}
+.wrapper .calculator .clear button{
+    width: 164px;
+}
